@@ -1,0 +1,21 @@
+﻿@model IEnumerable<HouseOwnerDetail>
+
+@{
+    ViewData["Title"] = "House Owner Detail";
+}
+
+
+<form asp-action="Index" method="post" enctype="multipart/form-data" class="bg-white border p-2">
+    <div class="row p-2">
+        <div class="col-md-3">
+            <label class="form-label fw-bolder">File (.xlsx)</label>
+            <input type="file" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" class="form-control" required oninvalid="this.setCustomValidity('Please Upload a .xlsx file')" />
+        </div>
+    </div>
+    <div class="col-md-3 p-2">
+        <button type="submit" class="btn btn-outline-primary">Upload</button>
+    </div>
+</form>
+
+
+@* @Model.Count(); *@
